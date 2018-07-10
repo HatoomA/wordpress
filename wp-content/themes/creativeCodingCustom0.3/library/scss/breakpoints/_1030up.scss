@@ -1,0 +1,33 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1030px;
+}
+
+
+body.home {
+
+	.company_overview{
+		div{
+			padding: 30px 40px;
+			p{
+				max-width: 47%;
+				FONT-SIZE:100%;
+			} img{
+				max-width: 49%;
+				&.no_mobile{
+					display:inline-block;
+				}
+			}
+		}
+	}
+}

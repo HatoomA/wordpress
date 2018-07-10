@@ -1,0 +1,107 @@
+#logo > a {
+    background-size: contain;
+    background-position: center;
+}
+
+#logo {
+    background-color: transparent;
+}
+
+//Mobile styles
+
+
+body#public {
+    background: transparent !important;
+    margin-top: 30px !important;
+}
+
+
+input.submit{
+	border: 3px solid #41b649;
+	color:#41b649;
+	border-radius: 23px;
+	padding: 10px 50px;
+	font-weight:bold;
+	text-transform: uppercase;
+	margin: 10px 0;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration:none;
+  background-color: transparent;
+}
+
+.buttonLink:hover{
+	background-color: #41b649;
+	color: $white !important;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+	.wufoo li {
+	    width: 100%;
+	}
+
+	input.field.text, .safari .wufoo select.select {
+	    padding: 10px;
+	    font-size: 1.4em;
+	}
+
+	textarea.field.textarea {
+	    padding: 10px;
+	    font-size: 1.5em;
+	    width: calc(100% - 20px);
+	    min-width: 0;
+	}
+
+	.wufoo p.instruct {
+	    display: block;
+	    position: relative;
+	    left: 0 !important;
+	    background-color: transparent;
+	    top: 3px;
+	    width: 90%;
+	    margin: 0px;
+	}
+
+	input.field.radio, input.field.checkbox {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+	}
+
+	label.choice {
+    font-size: 1em !important;
+    display: inline;
+    vertical-align: text-top;
+    margin-left: .1em;
+	}
+
+	.wufoo li.focused * {
+	    color: white !important;
+	}
+
+	input.text, input.search, textarea.field.textarea {
+	    width: calc(100% - 29px);
+	}
+
+}
+
+input.text, input.search, textarea.field.textarea {
+  color: black !important;
+}
+
+input.field.text {
+    color: black !important;
+}
+
+.wufoo li.focused option {
+    color: black !important;
+    z-index: 99;
+}
+
+.wufoo li.focused select {
+    color: black !important;
+}
