@@ -1,0 +1,982 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	text-align:center;
+}
+
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 2.75em;
+	line-height: 1.4em;
+  color: $blue;
+	font-weight:bold;
+	margin-bottom: 0.375em;
+	font-family: $quicksand;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+}
+
+/*********************
+PAGE LAYOUTS
+*********************/
+
+.home {
+	.homeHero{    
+		display: inline-block;
+    width: 100%;
+    position:relative;
+		img{
+			width:100%;
+		}
+
+		.banner{
+			width:150px;
+			height:290px;
+			background-size:cover;
+			background-position:center;
+			position:absolute;
+			top:0;
+			left:calc(50% - 75px);
+
+			.bannerButton {
+				background-color: #33d439;
+		    color: #fff !important;
+		    width: 140px;
+		    text-align: center;
+		    top: 160px;
+		    position: absolute;
+		    left: calc(50% - 70px);
+		    font-size: 16px;
+		    padding: 5px 5px;
+		    box-shadow: 0 1px 2px 0px #222;
+			}
+		}
+
+	}
+}
+
+.programs{
+	.coursePrograms{
+		li{
+			border-top: 1px dotted $meta-gray;
+			h2{
+				margin-bottom: 0px;
+			}
+			&:first-child{
+				border: none;
+			}
+		}
+	}
+}
+
+.register, .programs{
+	.courseProgramsSchedule{
+		li{
+			padding: inherit;
+		}
+	}
+	.dottedDevide{
+		border-top: 1px dotted $meta-gray;
+		margin:45px 0 0;
+	}
+	.regionSelector{
+		width:100%;
+		display:inline-block;
+	}
+	.regionSelect{
+		border-radius:10px 10px 0 0;
+		background: #cdeaf4;
+		visibility:hidden;
+	}
+	.regionSelector span{
+		cursor:pointer;
+    display: inline-block;
+    width: calc(50% - 3px);
+    margin: 0 1px;
+		background-color:#cdeaf4;
+	}
+	.go_to_registration_buttons{
+  	width: 100%;
+    display: inline-block;
+    margin:15px 0;
+    .buttonLink{
+    	margin:0 15px;
+    	width:350px;
+    }
+	}
+	.seattle span[data-region="seattle"] {
+		cursor: default;
+    color: $white;
+    background: $blue;
+	}
+	.hawaii span[data-region="hawaii"] {
+		cursor: default;
+    color: $white;
+    background: $blue;
+	}
+	.seattle tr.hawaiiRegion{
+		display:none;
+	}
+	.hawaii tr.seattleRegion{
+		display:none;
+	}
+	.classTable{
+		margin:0px 0 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    border-collapse: separate;
+    border-spacing: 2px 2px;
+    font-size: 1em;
+    width:100%;
+    display: table;
+
+		th{
+			display: table-cell;
+	    background: $blue;
+	    color: $white;
+	    padding: 8px 0;
+	    font-weight: 300;
+			border-bottom: none;
+		}
+		tr{
+			display: table-row;
+			padding: inherit;
+		}
+		td{
+			display: table-cell;
+			background: #cdeaf4;
+	    padding: 8px 0;
+	    font-weight: 300;
+
+	    input{
+	    	display: inline-block;
+		    width: auto;
+		    height: 1.5em;
+		    margin: 0 auto;
+		    padding-left: 5px;
+		    padding-right: 5px;
+		    width: 50px;
+		    text-align: center;
+	    }
+		}
+	}
+}
+
+.registerForm{
+	.registerFormWrapper{
+		margin-top:50px;
+		width:700px;
+		display: inline-block;
+	}
+}
+
+div.testimonials, div.aboutUs{
+
+	h1,h2,h3{
+		font-family: $quicksand;
+	  color: $blue;
+	  font-weight: bold;
+	}
+
+	.sectionHeaderWrapper{
+    clear: both;
+		text-align: center;
+		padding-top:40px;
+	}
+}
+
+.formDescription {
+  margin-top: 60px;
+}
+
+div.aboutUs{
+	ul.teachers{
+	  li{
+	    width: 48%;
+    }
+  }
+}
+
+div.default{
+	.entry-content{
+		margin-bottom:50px;
+		text-align: center;
+	}
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 760px;
+}
+
+#container.browsing{
+	.header{
+		border-top: none;
+
+	  #inner-header{
+			background-color: $cc4k-green;
+	  }
+
+
+		#logo{
+    	margin: 20px 0 25px;
+			line-height:.7em;
+
+			a{
+				color:$white;
+				&:hover{
+					color:$white;
+				}
+			}
+		}
+		.nav{
+			li {
+				a[href$="/hawaii/"] {
+					animation: none;
+		      -webkit-animation: none;
+				}
+
+				a {
+					color:$white;
+					&:hover{
+						padding-bottom:2px;
+						color:$white;
+					}
+				}
+			}
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {
+			    border-bottom: 2px solid #f8c02a;
+				}
+			}
+		}
+	}
+	#content{
+		padding-top:130px;
+	}
+
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	position:fixed;
+	width:100%;
+	transition: background-color .5s ease-in, height .5s ease-in;
+	line-height:1em;
+  z-index: 1;
+  background-color:transparent;
+
+  #inner-header{
+		border-top: 3px solid $cc4k-green;
+		transition: background-color .5s ease-in, height .5s ease-in;
+		background: $white;
+    padding-bottom: 0px;
+  }
+}
+
+	#logo {
+    margin: 25px 0 30px;
+    text-transform: uppercase;
+  	transition: line-height .5s ease-in, margin .5s ease-in;
+		a{
+    	transition: color .5s ease-in;
+			font-size: 1.8em;
+			font-weight: normal;
+    	font-family: Quicksand;
+			color: $cc4k-green;
+			&:hover{
+				color: $cc4k-green;
+			}
+		}
+	}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.openNavButton{
+	display:none;
+}
+
+.nav {
+	border-bottom: 0;
+  margin: inherit;
+  text-align: center;
+  background: inherit;
+  width: 100%;
+  opacity: 1;
+  pointer-events: inherit;
+  transition: opacity .5s, margin-top .5s, background .5s;
+  visibility: visible;
+  position: inherit;
+
+	border: 0;
+	padding-bottom:10px;
+
+	ul {
+		background:$black;
+		margin-top:0;
+		text-align:center;
+	}
+	li {
+    display: inline-block;
+		position: relative;
+
+		a {
+			text-transform: uppercase;
+			font-family: $quicksand;
+			transition: color .5s ease-in;
+			font-weight:bold;
+			color: $cc4k-green;
+			border-bottom: 0;
+			color: $meta-gray;
+			padding-bottom:2px;
+			margin: .3em .75em;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				padding-bottom:0px;
+				text-decoration: none;
+		    color: $blue;
+		    border-bottom: 2px solid #f8c02a;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {
+			color: $cc4k-green;
+		}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+
+.latestNews{    
+	display: block;
+	width:100%;
+	max-width: 60vw;
+  border-radius: 0 0 15px 15px;
+  background-color: $blue;
+  box-shadow: 0px 3px 3px -2px black;
+  transition:margin-top .7s, height 1.5s, opacity .5s;
+  color:$white;
+  margin:0 auto;
+  margin-top: -300px;
+  overflow: hidden;
+  padding: 10px 0;
+  &.show{
+  	margin-top:0 !important;
+  }
+  &:hover{
+  }
+  .newsItem{
+  	padding: 3px 0;
+  	text-overflow: ellipsis;
+
+  	a{
+  		color:$yellow;
+  	}
+  	&.title{
+  		font-weight:bold;
+  	}
+  }
+}
+
+.latestNewsCloseButton{
+  display: block;
+  margin:0 auto;
+  padding: 3px 15px 6px;
+  background-color: #33aad4;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 3px 3px -2px black;
+  cursor: pointer;
+  font-weight: bold;
+  color: $white;
+	width:155px;
+  transition:width .5s;
+  &.show{
+  	width:90px;
+  }
+}
+
+
+#content.register{
+	.jumpTos{
+		a{
+			cursor:pointer;
+		}
+	}
+	.imageList{
+		li{
+			display:none;
+			padding-top:0;
+			border:none !important;
+		}
+	}
+	.imageList.listView{
+		.listViewTitle{
+			display:block;
+			font-size:2em;
+		}
+		li{
+			cursor:pointer;
+			display:inline-block;
+			width:30%;
+		  margin: 1%;
+			border:none;
+			position:relative;
+
+			.liContent{
+				display:none;
+			}
+			.offerring_type_table{
+				display:none;
+			}
+			&.hc .pixel img{
+		    padding-top: 23px;
+			}
+			.pixel{
+				border-radius: 100%;
+				float:left;
+				width:100%;
+				position:relative;
+				img{
+					width:100%;
+					transition: opacity 1s, filter 1s;
+				}
+			}
+
+			.hoverText{
+				display:none;
+				top:0;
+				width:100%;
+				padding:10px;
+				position:absolute;
+				&:after{
+				  content: "";
+				  display: block;
+				  width: 100%;
+				  height: 0;
+				  padding-bottom: 100%;
+				  -moz-border-radius: 50%;
+				  -webkit-border-radius: 50%;
+				  border-radius: 50%;
+				}
+			  div{
+				  float: left;
+				  width: 100%;
+				  padding-top: 50%;
+				  line-height: 1em;
+				  margin-top: -0.5em;
+				  text-align: center;
+				  color: white;
+			  }
+			}
+			&:hover{
+				.pixel img{
+					filter: brightness(40%);
+					opacity: .8;
+				}
+				.hoverText{
+					display:block;
+				}
+			}
+		}
+	}
+}
+
+
+/*********************
+NEWS TICKER STYLES
+*********************/
+
+
+/*********************
+CONTENT
+*********************/
+#content{
+	transition: padding-top .5s ease-in;
+	padding-top:122px;
+	min-height:100vh;
+
+	a.anchor{
+    top: -180px;
+	}
+
+	.hero{
+		width:100%;
+		max-height:40vh;
+		position: relative;
+		overflow: hidden;
+		display:block;
+		min-height:420px;
+
+		img{
+			margin-top:-15vh;
+			width:100%;
+		}
+		h3{
+			position: absolute;
+	    top: 35%;
+	    margin-top: -15px;
+	    width: 100%;
+	    color: $white;
+	    text-transform: uppercase;
+	    font-size: 1.8em;
+	    font-family: $quicksand;
+	    font-weight: normal;
+	    text-align: center;
+		}
+
+	}
+
+
+	.jumpTos {
+    font-size: .8em;
+    .label{
+	    color: $meta-gray;
+	    text-transform: uppercase;
+	    font-size: .7em;
+	    display:inline;
+    }
+    a{
+    	border-bottom: 2px solid $cc4k-green;
+    	margin:0 15px;
+    	text-decoration: none;
+    	color: $text-color;
+    	&:hover{
+    		background-color: $cc4k-green;
+    		color:$white;
+    	}
+    }
+  	span{
+  		color: $text-color;
+  	}
+	}
+
+
+	.imageList{
+		.listViewTitle{
+			display:none;
+		}
+		li.active{
+			width:100%;
+			display:inline-block;
+			padding: 50px 0;
+
+			.hoverText{
+				display:none;
+			}
+
+			article{
+				display: inline-block !important;
+			}
+
+			img{
+		    margin: 15px 5% 30px 0;
+		    width: 30%;
+		    float:left;
+			}
+			.liContent{
+		    display:inline-block;
+		    text-align:left;
+		    width:65%;
+		    float:right;
+
+		    h2{
+		    	margin-top:0px;
+		    }
+			}
+			.offerring_type_table{
+				display:block;
+			}
+		}
+	}
+}
+
+ul.teachers{
+  padding: 50px 0;
+
+  li{
+    display: inline-block;
+    width: 23%;
+    margin: 15px 1%;
+  	img{
+	    border-radius: 100%;
+	    width: 100%;
+  	}
+  	h4{
+    	margin: 10px 0 0;
+  	}
+  	p{
+	    font-size: .8em;
+	    line-height: 1.7em;
+	    margin: 0;
+  	}
+  }
+}
+
+ul.testimonials{
+  padding: 50px 0;
+
+  li{
+  	vertical-align: top;
+    display: inline-block;
+    width: 33.3333333333%;
+    padding: 15px 2%;
+    text-align: left;
+    font-family: $quicksand;
+  	.quote{
+    	margin: 10px 0 0;
+    	color: $blue;
+    	font-weight: bold;
+  	}
+  	.source{
+  		font-style: italic;
+	    font-size: .8em;
+	    line-height: 2.5em;
+	    margin: 0;
+	    color: $meta-gray;
+  	}
+  }
+}
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+/*********************
+WIKI STYLES
+*********************/
+.kbe_articles {
+	ul {
+		text-align: left;
+	}
+}
+
+.kbe_articles_list {
+	text-align: left;
+}
+
+#kbe_container {
+	padding-top: 150px;
+
+}
+
+#kbe_content {
+	margin-left: 10%;
+	margin-right: auto;
+	.kbe_leftcol {
+		p, li {
+		    text-align: left;
+    	}
+	}
+}
+
+.kbe_content_right {
+	width: 90%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kbe_content_left {
+    width: 80%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kbe_breadcrum {
+    overflow-y: hidden;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: auto;
+    overflow-x: visible;
+}
+
+.kbe_search_field {
+    width: 40%;
+    margin-left: 10%;
+}
+
+/* end wiki styles */
