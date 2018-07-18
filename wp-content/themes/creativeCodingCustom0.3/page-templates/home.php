@@ -173,6 +173,71 @@
     <!--
     <p class="missionStatement"><?php echo the_field('mission_statement'); ?></p>
     -->
+ 
+
+
+<!--  Why code slidet  -->
+
+<div class="slideshow-container">  
+<?php if( have_rows('why_code_slider') ):
+   
+    while ( have_rows('why_code_slider') ) : the_row();
+     ?>
+    
+    
+<div class="mySlides fade">  
+
+  <img src="<?php echo the_sub_field('image') ?>" class="SliderImage" > 
+    <div class="SliderTitle"> <?php  the_sub_field('title');?>
+      <div class="SliderDesc"> <?php  the_sub_field('description');?>
+      </div>
+    </div>
+    
+
+</div>
+ 
+<?php
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+<div style="text-align:center">
+  <?php $count = count(get_field('why_code_slider')); 
+//echo $count;
+
+for ($i=1; $i <= $count ; $i++) { 
+ //dots navigators 
+?>
+
+
+<span class="dot" onclick="currentSlide(<?php echo $i; ?>)"></span>
+
+<?php
+}
+?> 
+
+</div>
+
+<!--  prev and next -->
+
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  
+</div>
+<br>
+
+
+
+
+<br>
+   
 
     <?php 
       $args = array( 'post_type' => 'testimonial', 'posts_per_page' => -1 );
@@ -199,6 +264,8 @@
 
     <?php endif; ?>
 
+
+
         </div>
 
       </main>
@@ -206,6 +273,12 @@
   </div>
 
 </div>
+
+
+
+
+
+
 
 
 <?php get_footer(); ?>
